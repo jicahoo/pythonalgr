@@ -29,7 +29,8 @@ class Solution(object):
             return 0
         n = len(prices)
         max_delta = 0
-        min_buy_in = prices[0] #No need to use heap.
+        # No need to use heap. Firstly, I tried to use heap to keep the min value. Actually, heap is unnecessary.
+        min_buy_in = prices[0]
         for i in xrange(1, n):
             cur = prices[i]
             delta = cur - min_buy_in
