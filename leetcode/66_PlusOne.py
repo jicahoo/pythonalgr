@@ -1,5 +1,5 @@
 class Solution(object):
-    def plusOne(self, digits):
+    def plusOne_first_solution(self, digits):
         """
         :type digits: List[int]
         :rtype: List[int]
@@ -24,6 +24,42 @@ class Solution(object):
 
         if not break_early and jin_wei != 0:
             digits.insert(0, jin_wei)
+        return digits
+
+
+    def plusOne(self, digits):
+        """
+        Rerfer to https://discuss.leetcode.com/topic/53421/fastest-python-solution-beats-99-24
+        You have to leverage the speciality of the problem and decrease the any computing as soon as possible.
+        :param digits:
+        :return:
+        """
+        n = len(digits)
+        for i in xrange(n-1, -1, -1):
+            if digits[i] < 9:
+                digits[i] += 1
+                return digits
+            else:
+                digits[i]=0
+
+        digits.insert(0, 1)
+        return digits
+
+    def plusOne_final_submit(self, digits):
+        """
+        Result is not stable: sometimes beat 79%, sometimes beat 3%.
+        :type digits: List[int]
+        :rtype: List[int]
+        """
+        n = len(digits)
+        for i in xrange(n - 1, -1, -1):
+            if digits[i] < 9:
+                digits[i] += 1
+                return digits
+            else:
+                digits[i] = 0
+
+        digits.insert(0, 1)
         return digits
 
 
