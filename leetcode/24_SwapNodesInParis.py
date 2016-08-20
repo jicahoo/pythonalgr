@@ -12,6 +12,7 @@ class Solution(object):
         """
         if head is None:
             return None
+        # A little tech: mock a head node to unify the whole processing cycle. Like a sentinel.
         mock_node = ListNode(0)
         b = mock_node
         p = head
