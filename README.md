@@ -1,5 +1,5 @@
 # pythonalgr
-learn algorithm using python
+Learn algorithm using python on leetcode.
 
 ## 385. Mini Parser
 * How to find the list's elements? You have to find the comma in the first level. 
