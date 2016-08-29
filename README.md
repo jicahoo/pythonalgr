@@ -6,6 +6,7 @@ Learn algorithm using python on leetcode.
 * How to deteremine the firt level? Use stack (which is tracking the pair of "[" and "]") to determine if current comma is in the first level.
 
 ## 383. Ransom Note [TODO]
+* Just follow the most natural way. Time complexity: m+n+n. Space complexity: 26*size( store "letter":[count_a,count_b] )
 * Try to write code directly. Ran into several issues: alogrithm is not right (since not use pseudo code and prove its correct), not familiar with Pythons's list index operation.
 * Try to avoid m*n time complexity.
 * Now time complexity: n*logn+m*logm+m*n, it seems that I failed on my goal. Space complexity: if sorted is in-place, it should be O(1)

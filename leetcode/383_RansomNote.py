@@ -1,4 +1,4 @@
-class Solution(object):
+class SolutionFirst(object):
     def canConstruct(self, ransomNote, magazine):
         """
         :type ransomNote: str
@@ -32,6 +32,32 @@ class Solution(object):
             if element == e:
                 return i
         return None
+
+class Solution(object):
+    def canConstruct(self, ransomNote, magazine):
+        """
+        :type ransomNote: str
+        :type magazine: str
+        :rtype: bool
+        """
+        # Just follow the most natural way: think about if how will you do it by manually,
+        # how many "a" I need, how many "b" I need, then count are there enough letters in magazine.
+        # Time complexity: m+n+n. Space complexity: 26*size( store "letter":[count_a,count_b] )
+        dict_ransom = {}
+        for letter in ransomNote:
+            if letter in dict_ransom:
+                dict_ransom[letter][0] += 1
+            else:
+                dict_ransom[letter] = [1, 0]
+        for letter in magazine:
+            if letter in dict_ransom:
+                dict_ransom[letter][1] += 1
+        for key in dict_ransom:
+            item = dict_ransom[key]
+            if item[0] > item[1]:
+                return False
+        return True
+
 
 if __name__ == '__main__':
     s = Solution()
