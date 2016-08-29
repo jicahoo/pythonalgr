@@ -9,4 +9,5 @@ Learn algorithm using python on leetcode.
 * Try to write code directly. Ran into several issues: alogrithm is not right (since not use pseudo code and prove its correct), not familiar with Pythons's list index operation.
 * Try to avoid m*n time complexity.
 * Now time complexity: n*logn+m*logm+m*n, it seems that I failed on my goal. Space complexity: if sorted is in-place, it should be O(1)
-* TODO: Like a sub-set check of set with duplicate elements; Another possible better way is to use Hash. From problem itself, we don't need sort. It's more about set operation.
+* TODO: Like a sub-set check of set with duplicate elements or common sub-string check problem;
+Another possible better way is to use Hash. From problem itself, we don't need sort. It's more about set operation.
