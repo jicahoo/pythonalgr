@@ -11,3 +11,6 @@ Learn algorithm using python on leetcode.
 * Now time complexity: n*logn+m*logm+m*n, it seems that I failed on my goal. Space complexity: if sorted is in-place, it should be O(1)
 * TODO: Like a sub-set check of set with duplicate elements or common sub-string check problem;
 Another possible better way is to use Hash. From problem itself, we don't need sort. It's more about set operation.
+* I learned to use assert of Python to run my test case.
+* I didn't think out complete & useful test cases, just hurried up to submit my code.
+* Two things I got: Think clear about the algorithm: pseudo code prove and complete test case. Maybe 80% is on it, 20% to write code. Try to stick to it.
