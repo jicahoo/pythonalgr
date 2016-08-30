@@ -1,6 +1,14 @@
 # pythonalgr
 Learn algorithm using python on leetcode.
 
+## 227 Basic Calculator II
+* Result: Beat 63%. Time: O(n), Space: O(n)
+* Think about how do you calculate + - * /
+* String basic paring method: regex, split, strip, then process tokens as list. Just  string -> split -> list -> process linearly.
+* We can handle them linearly, since it is simple string without '(' or negative number. How to handle more complex expression?
+* More better way?
+
+
 ## 385. Mini Parser
 * How to find the list's elements? You have to find the comma in the first level. 
 * How to deteremine the firt level? Use stack (which is tracking the pair of "[" and "]") to determine if current comma is in the first level.
