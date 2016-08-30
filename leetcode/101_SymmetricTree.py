@@ -1,10 +1,11 @@
-#Beat 47%
+# Beat 47%
 
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
+
 
 class Solution(object):
     def isSymmetric(self, root):
@@ -24,9 +25,9 @@ class Solution(object):
             return False
         else:
             layer = [left, right]
-            while len(layer) != 0 and (len(layer))%2 == 0:
+            while len(layer) != 0 and (len(layer)) % 2 == 0:
                 n = len(layer)
-                mid = n/2
+                mid = n / 2
                 for k in xrange(0, mid):
                     i = mid - k - 1
                     j = mid + k
@@ -37,14 +38,17 @@ class Solution(object):
                     if left_node.left is None and right_node.right is None:
                         if left_node.right is None and right_node.left is None:
                             is_child_mirror = True
-                        elif (left_node.right is not None and right_node.left is not None) and (left_node.right.val == right_node.left.val):
+                        elif (left_node.right is not None and right_node.left is not None) and (
+                            left_node.right.val == right_node.left.val):
                             is_child_mirror = True
                         else:
                             is_child_mirror = False
-                    elif (left_node.left is not None and right_node.right is not None) and (left_node.left.val == right_node.right.val):
+                    elif (left_node.left is not None and right_node.right is not None) and (
+                        left_node.left.val == right_node.right.val):
                         if left_node.right is None and right_node.left is None:
                             is_child_mirror = True
-                        elif (left_node.right is not None and right_node.left is not None) and (left_node.right.val == right_node.left.val):
+                        elif (left_node.right is not None and right_node.left is not None) and (
+                            left_node.right.val == right_node.left.val):
                             is_child_mirror = True
                         else:
                             is_child_mirror = False
@@ -91,8 +95,3 @@ if __name__ == '__main__':
     node_3_dup.left = None
     node_3_dup.right = None
     print s.isSymmetric(root)
-
-
-
-
-

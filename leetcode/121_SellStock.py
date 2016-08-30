@@ -6,7 +6,7 @@ class Solution(object):
         """
         if len(prices) < 2:
             return 0
-        h=[]
+        h = []
         import heapq
         heapq.heappush(h, prices[0])
         n = len(prices)
@@ -40,8 +40,9 @@ class Solution(object):
                 min_buy_in = cur
         return max_delta
 
+
 if __name__ == '__main__':
     s = Solution()
-    print s.maxProfit([7,6,4,3,1])
+    print s.maxProfit([7, 6, 4, 3, 1])
     print s.maxProfit([7])
     print s.maxProfit([])

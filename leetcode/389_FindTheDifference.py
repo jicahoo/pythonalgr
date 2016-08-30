@@ -23,5 +23,4 @@ if __name__ == '__main__':
     s = Solution()
     a = "abcde"
     b = "abcdef"
-    print s.findTheDifference(a,b)
-
+    print s.findTheDifference(a, b)

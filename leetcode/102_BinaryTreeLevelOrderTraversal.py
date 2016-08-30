@@ -1,9 +1,11 @@
-#Definition for a binary tree node.
+# Definition for a binary tree node.
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
+
+
 '''
 At first, I use Queue which is heavy data structure, since it is designed for concurrent scenario. It only beats 6%.
 So I tried deque below and the improved solution beat 68% (the best score).
@@ -75,6 +77,7 @@ class Solution(object):
         return r
 '''
 
+
 # Solution that using pre-order traverse. More clear.
 class Solution(object):
     def __init__(self):
@@ -86,8 +89,8 @@ class Solution(object):
             if len(self.res) <= depth:
                 self.res.append([])
             self.res[depth].append(val)
-            self.helper(node.left, depth+1)
-            self.helper(node.right, depth+1)
+            self.helper(node.left, depth + 1)
+            self.helper(node.right, depth + 1)
 
     def levelOrder(self, root):
         """
@@ -114,4 +117,3 @@ if __name__ == '__main__':
     s = Solution()
     print s.levelOrder(root)
     print s.levelOrder(None)
-

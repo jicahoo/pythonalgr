@@ -21,13 +21,12 @@ class Solution(object):
             cur = nums[i]
 
             lastSelected_a = False
-            posible_better_choice = q-last+cur
+            posible_better_choice = q - last + cur
             temp_a = max(q, posible_better_choice)
             if temp_a == posible_better_choice and q != posible_better_choice:
                 lastSelected_a = True
             p_a = q
             q_a = temp_a
-
 
             temp_b = p + cur
             p_b = q
@@ -35,11 +34,11 @@ class Solution(object):
 
             temp_max = max(temp_a, temp_b)
             if temp_a == temp_b:
-                    p = p_a
-                    q = q_a
+                p = p_a
+                q = q_a
             elif temp_a == temp_max:
-                    p = p_a
-                    q = q_a
+                p = p_a
+                q = q_a
             else:
                 p = p_b
                 q = q_b
@@ -51,9 +50,7 @@ class Solution(object):
 
 if __name__ == '__main__':
     a = Solution()
-    print a.rob([2,3,2])
-    print a.rob([0,0,0])
-    print a.rob([1,1,1])
-    print a.rob([1,1,1,2])
-
-
+    print a.rob([2, 3, 2])
+    print a.rob([0, 0, 0])
+    print a.rob([1, 1, 1])
+    print a.rob([1, 1, 1, 2])

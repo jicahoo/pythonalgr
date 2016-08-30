@@ -6,7 +6,7 @@ class NumArray(object):
         """
         self.nums = nums
         for i in xrange(1, len(nums)):
-            self.nums[i] = self.nums[i-1]+self.nums[i]
+            self.nums[i] = self.nums[i - 1] + self.nums[i]
         self.nums = self.nums
 
     def sumRange(self, i, j):
@@ -18,7 +18,8 @@ class NumArray(object):
         """
         if i == 0:
             return self.nums[j]
-        return self.nums[j]-self.nums[i-1]
+        return self.nums[j] - self.nums[i - 1]
+
 
 if __name__ == '__main__':
     n = 10

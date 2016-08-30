@@ -1,5 +1,3 @@
-
-
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
@@ -19,7 +17,7 @@ class Solution(object):
         height_left = self.h(root_node.left)
         height_right = self.h(root_node.right)
         max_height = max(height_left, height_right)
-        height_root = max_height+1
+        height_root = max_height + 1
         self.lookup[root_node] = height_root
         return height_root
 
@@ -38,6 +36,7 @@ class Solution(object):
         is_left_balanced = self.isBalanced(root.left)
         is_right_balanced = self.isBalanced(root.right)
         return is_root_balanced and is_left_balanced and is_right_balanced
+
 
 if __name__ == '__main__':
     root = TreeNode(1)
@@ -60,5 +59,3 @@ if __name__ == '__main__':
     node_6 = TreeNode(6)
     node_5.left = node_6
     print s.isBalanced(root)
-
-

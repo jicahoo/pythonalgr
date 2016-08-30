@@ -3,6 +3,7 @@ This is the interface that allows for creating nested lists.
 You should not implement it, or speculate about its implementation
 """
 
+
 class NestedInteger(object):
     def __init__(self, value=None):
         """
@@ -80,7 +81,7 @@ class Solution(object):
         :rtype: list
         """
         if s[0] == '[':
-            #is list
+            # is list
             strs = self.split(s)
             ls = NestedInteger()
             for e in strs:
@@ -88,7 +89,7 @@ class Solution(object):
                     ls.getList().append(self.deserialize(e))
             return ls
         else:
-            #should be a digit
+            # should be a digit
             return NestedInteger(int(s))
 
     def split(self, s):
@@ -104,9 +105,9 @@ class Solution(object):
                 stack.pop()
             if c == "," and len(stack) == 1:
                 element = s[k:i]
-                k = i+1
+                k = i + 1
                 strs.append(element)
-        strs.append(s[k:n-1])
+        strs.append(s[k:n - 1])
         return strs
 
 
@@ -117,14 +118,14 @@ class SolutionJichao(object):
         :rtype: list
         """
         if s[0] == '[':
-            #is list
+            # is list
             strs = self.split(s)
             ls = []
             for e in strs:
                 ls.append(self.deserialize(e))
             return ls
         else:
-            #should be a digit
+            # should be a digit
             return int(s)
 
     def split(self, s):
@@ -140,10 +141,11 @@ class SolutionJichao(object):
                 stack.pop()
             if c == "," and len(stack) == 1:
                 element = s[k:i]
-                k = i+1
+                k = i + 1
                 strs.append(element)
-        strs.append(s[k:n-1])
+        strs.append(s[k:n - 1])
         return strs
+
 
 if __name__ == '__main__':
     # s = SolutionJichao()
@@ -155,16 +157,10 @@ if __name__ == '__main__':
     case_c = "[-1,3,4,[5]]"
     print s.deserialize(case_c)
 
-    d = [-1,3,4,[-5,[1,333,-444],[4,5,6,-9]]]
+    d = [-1, 3, 4, [-5, [1, 333, -444], [4, 5, 6, -9]]]
     case_d = "[-1,3,4,[-5,[1,333,-444],[4,5,6,-9]]]"
-    #print s.split(case_d)
-    #print s.split("[]")
+    # print s.split(case_d)
+    # print s.split("[]")
     print s.deserialize(case_d)
     case_f = "[]"
     print s.deserialize(case_f)
-
-
-
-
-
-

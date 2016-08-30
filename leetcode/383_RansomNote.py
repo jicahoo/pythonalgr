@@ -12,7 +12,7 @@ class SolutionFirst(object):
         m = len(sorted_magazine)
         last_find_start_point = 0
         for i in xrange(n):
-            if i > m-1:
+            if i > m - 1:
                 ret = False
                 break
             else:
@@ -22,7 +22,7 @@ class SolutionFirst(object):
                     ret = False
                     break
                 else:
-                    last_find_start_point = idx+1
+                    last_find_start_point = idx + 1
         return ret
 
     def find(self, my_list, start, element):
@@ -32,6 +32,7 @@ class SolutionFirst(object):
             if element == e:
                 return i
         return None
+
 
 class Solution(object):
     def canConstruct(self, ransomNote, magazine):
@@ -86,7 +87,7 @@ if __name__ == '__main__':
     assert not s.canConstruct(ransom, mag)
 
     ransom = "fihjjjjei"
-    mag =  "hjibagacbhadfaefdjaeaebgi"
+    mag = "hjibagacbhadfaefdjaeaebgi"
     print sorted(ransom)
     print sorted(mag)
     assert not s.canConstruct(ransom, mag)
