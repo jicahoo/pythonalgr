@@ -1,7 +1,15 @@
 # pythonalgr
 Learn algorithm using python on leetcode.
 
-## 227 Basic Calculator II
+## 136. Single Number
+* Just use xor. 
+* xor operation has below mathematical property: 0 xor n = n; n xor n = 0; n xor m = m xor n. You can easily prove that below solution is correct.
+
+```python
+return reduce(lambda x, y : x ^ y, numbers, 0);
+```
+
+## 227. Basic Calculator II
 * Result: Beat 63%. Time: O(n), Space: O(n)
 * Think about how do you calculate + - * /
 * String basic paring method: regex, split, strip, then process tokens as list. Just  string -> split -> list -> process linearly.
