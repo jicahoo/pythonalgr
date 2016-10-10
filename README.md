@@ -11,7 +11,10 @@ Learn algorithm using python on leetcode.
 
 ## 385. Mini Parser
 * How to find the list's elements? You have to find the comma in the first level. 
-* How to deteremine the firt level? Use stack (which is tracking the pair of "[" and "]") to determine if current comma is in the first level.
+* How to determine the first level? Use stack (which is tracking the pair of "[" and "]") to determine if current comma is in the first level.
+
+## 387. First unique character in a string.
+* O(n+26). It seems that there is no better solution.
 
 ## 383. Ransom Note [TODO]
 * Just follow the most natural way. Time complexity: m+n+n. Space complexity: 26*size( store "letter":[count_a,count_b] )
