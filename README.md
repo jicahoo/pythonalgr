@@ -9,6 +9,10 @@ Learn algorithm using python on leetcode.
 return reduce(lambda x, y : x ^ y, numbers, 0);
 ```
 
+## 155. Min Stack
+* The simple and straightforward way may be the fast one.
+* Use MaxHeap structure is not good choice, comparing the simple solution. The simpe solution beats 60%, the bad one beats only <10%.
+
 ## 227. Basic Calculator II
 * Result: Beat 63%. Time: O(n), Space: O(n)
 * Think about how do you calculate + - * /
