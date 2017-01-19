@@ -38,3 +38,6 @@ Another possible better way is to use Hash. From problem itself, we don't need s
 * I learned to use assert of Python to run my test case.
 * I didn't think out complete & useful test cases, just hurried up to submit my code.
 * Two things I got: Think clear about the algorithm: pseudo code prove and complete test case. Maybe 80% is on it, 20% to write code. Try to stick to it.
+
+## 421. Max XOR value in array.
+* Current result beats 7% in python. More details, see the comments of code.
