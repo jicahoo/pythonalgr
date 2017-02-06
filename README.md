@@ -9,6 +9,11 @@ Learn algorithm using python on leetcode.
 return reduce(lambda x, y : x ^ y, numbers, 0);
 ```
 
+## 146. LRU Cache
+* Result: Beat 43%. Time: O(1), Space: O(n). Time spent: 4 hours.
+* Not easy to operate the pointers in the doubly linked list correctly. Need to be very carefully. 
+* Many internal structure and variable for maintaining a O(1) LRU cache. Need to update them carefully. 
+
 ## 155. Min Stack
 * The simple and straightforward way may be the fast one.
 * Use MaxHeap structure is not good choice, comparing the simple solution. The simpe solution beats 60%, the bad one beats only <10%.
