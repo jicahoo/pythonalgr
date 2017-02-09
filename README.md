@@ -46,3 +46,8 @@ Another possible better way is to use Hash. From problem itself, we don't need s
 
 ## 421. Max XOR value in array.
 * Current result beats 7% in python. More details, see the comments of code.
+
+## 422. Find duplicates (twice) in array.
+* Beats 72%. Time: O(n), Space: O(1). 
+* Solution: Leverage mod operation. 
+* What I learned: read question carefully, especially the key condition: 1 <= a[i] <= n and repeats **twice**
