@@ -1,6 +1,12 @@
+import unittest
+
+import sys
+
+
 class Solution(object):
     def firstUniqChar(self, s):
         """
+        Score: beats 80%.
         :type s: str
         :rtype: int
         """
@@ -8,18 +14,24 @@ class Solution(object):
         d = {}
         for i, c in enumerate(s):
             if c in d:
-                d[c].append(i)
+                d[c] = -1
             else:
-                d[c] = [i]
-        ret = -1
+                d[c] = i
+        ret = sys.maxint
         for k, v in d.items():
-            if len(v) == 1 and (ret == -1 or v[0] < ret):
-                ret = v[0]
-        return ret
+            if v != -1 and v < ret:
+                ret = v
+        return ret if ret != sys.maxint else -1
+
+
+class SolutionTest(unittest.TestCase):
+    def test_solution(self):
+        s = Solution()
+        self.assertEqual(0, s.firstUniqChar("leetcode"))
+        self.assertEqual(2, s.firstUniqChar("loveleetcoe"))
+        self.assertEqual(0, s.firstUniqChar("qwertyuiop"))
+        self.assertEqual(-1, s.firstUniqChar("aaaaaa"))
 
 
 if __name__ == '__main__':
-    s = Solution()
-
-    assert 0 == s.firstUniqChar("leetcode")
-    assert 2 == s.firstUniqChar("loveleetcode")
+    unittest.main()

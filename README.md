@@ -1,6 +1,17 @@
 # pythonalgr
 Learn algorithm using python on leetcode.
 
+## 94. Binary Tree In Order Traversal
+今天, 在脑海里, 总结了一下三种二叉树遍历的迭代实现方式, 有一些感悟:
+1. 先序的迭代实现是最简单的, 因为你只需要访问根节点一次, 访问之后, 就可以从栈中丢弃, 放入子树的节点, 就可以完成后续的工作.
+2. 中序遍历的迭代实现, 核心操作, POP时,如果有右孩子, 把右孩子的最左一串入栈. 出栈的是, 这个节点的相对角色是个root节点. 所以
+出栈时, 左子树已遍历完毕, 然后, root出栈, 再将右子树遍历. 次栈顶元素是刚POP出的元素的父节点, 关系反过来, POP出元素是次栈顶元素的左孩子, 逻辑以和上面的
+'root出栈时, 它的左子树以遍历完毕'形成完备的逻辑和算法流程.
+3. 注意栈中相邻节点的逻辑关系, 在中序遍历中, 相邻节点是左孩子和父节点的关系, 父节点更靠栈底, 或者是 父节点的左孩子的右子树的某些节点与父节点的关系. 有助于理解算法.
+4. 迭代中, 仍有递归的思想. 要以子树作为一个整体去构造算法和理解算法. 而不仅仅是, 左孩子, 右孩子。要理解为左子树, 右子树.
+5. 后序遍历, 要走根节点两次, 复杂些. 父节点是从左节点到右节点的桥梁, 因为是后续, 所以要保存父节点, 走完左子树, 从父节点, 找到右子树啊, 再回到父节点.
+6. 在中序遍历和后续遍历中, 最左串是算法的脉络或者二叉树的脉络.
+
 ## 136. Single Number
 * Just use xor. 
 * xor operation has below mathematical property: 0 xor n = n; n xor n = 0; n xor m = m xor n. You can easily prove that below solution is correct.
@@ -8,6 +19,10 @@ Learn algorithm using python on leetcode.
 ```python
 return reduce(lambda x, y : x ^ y, numbers, 0);
 ```
+
+## 145. Binary Tree Postorder Traversal. 二叉树后序遍历
+* 经过不懈努力, 写出了一个简洁版本. 如果你的代码看着有重复的地方, 重复的逻辑, 重复的循环, 总有奇奇怪怪的变量, 你总是可以去除它.
+* 我写的解法的结构和94题的二叉树中序遍历是一模一样的. 其实是受了94题的解法的启发, while循环担任了两层循环职责. 一个是驱动整体逻辑, 一个是驱动不断地POP栈顶元素.
 
 ## 146. LRU Cache
 * Result: Beat 43%. Time: O(1), Space: O(n). Time spent: 4 hours.
@@ -25,13 +40,26 @@ return reduce(lambda x, y : x ^ y, numbers, 0);
 * We can handle them linearly, since it is simple string without '(' or negative number. How to handle more complex expression?
 * More better way?
 
+## 241. Different ways to add parentheses.
+* TODO
+
+## 338. Count Bits
+* Result: Best score 95%  Time:O(n) Space: O(n)
+* Question Tag: DP, Bit Operation.
+* The mechanism of binary digits: try to get the DP formula: 
+* number_of_bits(n) = number_of_bits(n/2) if n is even;
+* number_of_bits(n) = number_of_bits(n/2) + 1 if n is odd.
+* number_of_bits(0) = 0.
+* Learned: the step in DP may not be n -> n + 1. In this question, the step in DP is n/2 -> n. Generally, f(n) = DP(m). 1 < m < n.
+
 
 ## 385. Mini Parser
 * How to find the list's elements? You have to find the comma in the first level. 
 * How to determine the first level? Use stack (which is tracking the pair of "[" and "]") to determine if current comma is in the first level.
 
 ## 387. First unique character in a string.
-* O(n+26). It seems that there is no better solution.
+* Score: 80%. Time: O(n) Space: O(n).
+* Note: Not store useless info. Just store the index of char if there is no dup currently. If found dup, just set -1.
 
 ## 383. Ransom Note [TODO]
 * Just follow the most natural way. Time complexity: m+n+n. Space complexity: 26*size( store "letter":[count_a,count_b] )
