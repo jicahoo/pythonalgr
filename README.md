@@ -20,9 +20,15 @@ Learn algorithm using python on leetcode.
 return reduce(lambda x, y : x ^ y, numbers, 0);
 ```
 
+## 144. Binary Tree Preorder Traveral. 二叉树先序遍历
+* 算法复杂度是怎样的?
+
 ## 145. Binary Tree Postorder Traversal. 二叉树后序遍历
 * 经过不懈努力, 写出了一个简洁版本. 如果你的代码看着有重复的地方, 重复的逻辑, 重复的循环, 总有奇奇怪怪的变量, 你总是可以去除它.
 * 我写的解法的结构和94题的二叉树中序遍历是一模一样的. 其实是受了94题的解法的启发, while循环担任了两层循环职责. 一个是驱动整体逻辑, 一个是驱动不断地POP栈顶元素.
+* 在遍历树的节点的时候, 你要不断地改变自己的参照系. 在不同的步骤中, 你可能会选择不同的节点作为所谓的当前的根节点, 以选中的根节点, 思考如何进行
+下一步操作, 所以, 你要足够小心, 不要把这个参照系, 在不断的变换中, 弄混了.
+
 
 ## 146. LRU Cache
 * Result: Beat 43%. Time: O(1), Space: O(n). Time spent: 4 hours.
