@@ -85,3 +85,11 @@ Another possible better way is to use Hash. From problem itself, we don't need s
 * Beats 72%. Time: O(n), Space: O(1). 
 * Solution: Leverage mod operation. 
 * What I learned: read question carefully, especially the key condition: 1 <= a[i] <= n and repeats **twice**
+
+
+# Java程序员问Python程序员
+* Python程序执行入口是什么? Java中是main函数。
+* Python的模块是什么时候，如何加载的？ Java中，是懒加载类的，运行时，用到了某个class, 就加载那个class
+* Python的字符串长什么样子，是什么编码的？ Java的String是UTF-16的
+* Java中的byte code 和 Python的pyc可以对应起来吗? pyc的作用是什么？
+* Java有CLASSPath的概念， Python对应的概念是什么？ Python执行的实行是从何处查找依赖的包的？
