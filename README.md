@@ -93,3 +93,6 @@ Another possible better way is to use Hash. From problem itself, we don't need s
 * Python的字符串长什么样子，是什么编码的？ Java的String是UTF-16的
 * Java中的byte code 和 Python的pyc可以对应起来吗? pyc的作用是什么？
 * Java有CLASSPath的概念， Python对应的概念是什么？ Python执行的实行是从何处查找依赖的包的？
+* Java需要Getter/Setter, Python怎样弄?
+* Java有静态成员, Python有吗？
+* Java有不同的访问修饰符: private, protected, public. Python对应的东西是什么? Python是如何做到模块级别，类级别的封装的？
